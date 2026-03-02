@@ -5,20 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wedding RSVP</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <main class="container">
-  <div class="envelope" id="envelope">
+    <div class="envelope" id="envelope">
 
-    <div class="envelope-flap"></div>
+      <div class="envelope-flap"></div>
 
-    <div class="ticket" id="ticket">
-      <h1>You’re Invited</h1>
-      <p class="date">12 September</p>
-      <p class="deadline">Please respond by the end of May</p>
-    </div>
+      <div class="ticket" id="ticket">
+        <div class="ticket-inner">
+
+          <!-- INVITE -->
+          <div class="invite">
+            <h1>You’re Invited</h1>
+            <p class="date">12 September</p>
+            <p class="deadline">Please respond by the end of May</p>
+            <button id="openRsvp">Open RSVP</button>
+          </div>
+
+          <!-- RSVP FORM -->
+          <form id="rsvpForm" class="hidden">
+            <label>
+              Your name
+              <input type="text" required>
+            </label>
+
+            <label>
+              Will you attend?
+              <select required>
+                <option value="">Select</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
+
+            <label>
+              Number attending
+              <select>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </label>
+
+            <label>
+              Notes / dietary requirements
+              <textarea rows="3"></textarea>
+            </label>
+
+            <button type="submit">Send RSVP</button>
+          </form>
+
+        </div>
+      </div>
+
     </div>
   </main>
 
